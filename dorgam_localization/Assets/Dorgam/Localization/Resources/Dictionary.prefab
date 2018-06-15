@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1361748949802312}
+  m_IsPrefabParent: 1
+--- !u!1 &1361748949802312
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4969728541639914}
+  - component: {fileID: 114698331416033538}
+  m_Layer: 0
+  m_Name: Dictionary
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4969728541639914
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1361748949802312}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114698331416033538
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1361748949802312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 689d66d346808174d8f1175527491061, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  supportedLanguages: 0a00000001000000
+  stringTerms:
+  - value: hi
+    translations:
+    - value: Hello
+    - value: "\u0645\u0631\u062D\u0628\u0627"
+  spriteTerms:
+  - value: image
+    translations:
+    - value: {fileID: 21300000, guid: 001446f67fa410642afdf370075b53c1, type: 3}
+    - value: {fileID: 21300000, guid: a907b6c220056eb48983b1204955192b, type: 3}
+  audioTerms: []
+  tMPFonts:
+  - value: default_tmp
+    translations:
+    - value: {fileID: 11400000, guid: 05a9253ac8e60b448bdae4b901f81cd5, type: 2}
+    - value: {fileID: 11400000, guid: 8d5a35d9e00668242abea533768a023f, type: 2}
+  fonts:
+  - value: default_ugui
+    translations:
+    - value: {fileID: 12800000, guid: ece7dc758aa1e1f43888284fcccaf1c2, type: 3}
+    - value: {fileID: 12800000, guid: ece7dc758aa1e1f43888284fcccaf1c2, type: 3}
+  startWithDeviceLanguage: 0
+  startingLanguage: 10
