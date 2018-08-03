@@ -51,27 +51,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 689d66d346808174d8f1175527491061, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  supportedLanguages: 0a00000001000000
-  stringTerms:
-  - value: hi
+  _stringTerms:
+  - _value: hello
     translations:
-    - value: Hello
-    - value: "\u0645\u0631\u062D\u0628\u0627"
-  spriteTerms:
-  - value: image
+    - _language: 10
+      _value: Hello
+    - _language: 1
+      _value: "\u0645\u0631\u062D\u0628\u0627"
+    - _language: 14
+      _value: Bonjour
+  _spriteTerms: []
+  _audioTerms: []
+  _fonts:
+  - _value: default_ugui
     translations:
-    - value: {fileID: 21300000, guid: 001446f67fa410642afdf370075b53c1, type: 3}
-    - value: {fileID: 21300000, guid: a907b6c220056eb48983b1204955192b, type: 3}
-  audioTerms: []
-  tMPFonts:
-  - value: default_tmp
-    translations:
-    - value: {fileID: 11400000, guid: 05a9253ac8e60b448bdae4b901f81cd5, type: 2}
-    - value: {fileID: 11400000, guid: 8d5a35d9e00668242abea533768a023f, type: 2}
-  fonts:
-  - value: default_ugui
-    translations:
-    - value: {fileID: 12800000, guid: ece7dc758aa1e1f43888284fcccaf1c2, type: 3}
-    - value: {fileID: 12800000, guid: ece7dc758aa1e1f43888284fcccaf1c2, type: 3}
-  startWithDeviceLanguage: 0
-  startingLanguage: 10
+    - _language: 10
+      _value: {fileID: 12800000, guid: ece7dc758aa1e1f43888284fcccaf1c2, type: 3}
+    - _language: 1
+      _value: {fileID: 12800000, guid: ece7dc758aa1e1f43888284fcccaf1c2, type: 3}
+    - _language: 14
+      _value: {fileID: 12800000, guid: ece7dc758aa1e1f43888284fcccaf1c2, type: 3}
+  _startWithDeviceLanguage: 0
+  _startingLanguage: 1

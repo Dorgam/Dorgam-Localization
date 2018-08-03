@@ -44,10 +44,10 @@ using System;
 using System.Collections.Generic;
 #endregion
 
-namespace ArabicSupport
+namespace Dorgam.Localization.RTLSupport
 {
 	
-	public class ArabicFixer
+	public class RTLFixer
 	{	
 		/// <summary>
 		/// Fix the specified string.

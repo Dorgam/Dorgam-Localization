@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Dorgam.Localization
+namespace Dorgam.Localization.Core
 {
 	public class SetLanguageOnButtonClick : MonoBehaviour 
 	{
-		[SerializeField] private SystemLanguage TargetLanguage;
-		private Button button;
+		[SerializeField] private SystemLanguage _targetLanguage;
+		private Button _button;
 		private void Start() 
 		{
 			GetComponent<Button>().onClick.AddListener(delegate 
 			{
-				LocalizationManager.SetLanguage(TargetLanguage);
+				LocalizationManager.SetLanguage(_targetLanguage);
 			});
 		}
 	}

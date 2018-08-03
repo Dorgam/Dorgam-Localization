@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Dorgam.Localization 
+namespace Dorgam.Localization.Core
 {
 	public abstract class AbstractLocalize : MonoBehaviour 
 	{
-		[SerializeField] protected string term;
+		[SerializeField] protected string Term;
+
 		protected abstract void Localize();
+
 		private void OnEnable()
 		{
 			LocalizationManager.OnLocalization += Localize;
@@ -25,7 +27,7 @@ namespace Dorgam.Localization
 
 		public void SetTerm(string term)
 		{
-			this.term = term;
+			this.Term = term;
 			Localize();
 		}
 	}

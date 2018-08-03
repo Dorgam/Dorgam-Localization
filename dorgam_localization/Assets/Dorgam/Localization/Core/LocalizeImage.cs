@@ -4,19 +4,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Dorgam.Localization
+namespace Dorgam.Localization.Core
 {
 	public class LocalizeImage : AbstractLocalize
 	{
-		private Image image;
+		private Image _image;
+
 		private void Awake()
 		{
-			image = GetComponent<Image>();
+			_image = GetComponent<Image>();
 		}
 
 		protected override void Localize()
 		{
-			image.sprite = LocalizationManager.GetTranslation<Sprite>(term);
+			_image.sprite = LocalizationManager.GetTranslation<Sprite>(Term);
 		}
 	}
 }

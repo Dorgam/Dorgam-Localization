@@ -1,25 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+#if TextMeshPro
 using TMPro;
+#endif
+using UnityEngine;
 
-namespace Dorgam.Localization
+namespace Dorgam.Localization.Core
 {
 	[System.Serializable]
 	public abstract class Term
 	{
-		public string Value {get {return value;}}
-		[SerializeField] private string value;
+		public string Value {get {return _value;}}
+		[SerializeField] private string _value;
 	}
 
 	[System.Serializable]
 	public abstract class Term<T> : Term
 	{
 		public abstract Translation<T>[] Translations {get;}
-		public void SetTranslation(T translation, SystemLanguage language)
-		{
-			Translations[LocalizationManager.GetCurrentLanguageIndex()].Value = translation;
-		}
 	}
 
 	[System.Serializable]
@@ -43,14 +41,16 @@ namespace Dorgam.Localization
 		public override Translation<AudioClip>[] Translations { get {return translations;}}
 	}
 
-	[System.Serializable]
+#if TextMeshPro
+    [System.Serializable]
 	public class TMPFontTerm : Term<TMP_FontAsset>
 	{
 		[SerializeField] private TMPFontTranslation[] translations;
 		public override Translation<TMP_FontAsset>[] Translations { get {return translations;}}
 	}
+#endif
 
-	[System.Serializable]
+    [System.Serializable]
 	public class FontTerm : Term<Font>
 	{
 		[SerializeField] private FontTranslation[] translations;
