@@ -56,20 +56,42 @@ MonoBehaviour:
     translations:
     - _language: 10
       _value: Hello
-    - _language: 1
-      _value: "\u0645\u0631\u062D\u0628\u0627"
     - _language: 14
       _value: Bonjour
-  _spriteTerms: []
-  _audioTerms: []
+    - _language: 1
+      _value: "\u0628\u0633\u0645 \u0627\u0644\u0644\u0647 \u0627\u0644\u0631\u062D\u0645\u0646
+        \u0627\u0644\u0631\u062D\u064A\u0645\u060C \u0623\u0646\u0627 \u0636\u0631\u063A\u0627\u0645\u060C
+        \u0623\u0637\u0648\u0631 \u0627\u0644\u0623\u0644\u0639\u0627\u0628"
+  _spriteTerms:
+  - _value: cool_sprite
+    translations:
+    - _language: 1
+      _value: {fileID: 21300000, guid: f8898fe0a015ca044a29e987f58141ed, type: 3}
+    - _language: 10
+      _value: {fileID: 21300000, guid: 56f71048f9cb36b479fce4f7212cac35, type: 3}
+  _audioTerms:
+  - _value: cool_audio
+    translations:
+    - _language: 14
+      _value: {fileID: 8300000, guid: ed60af433c5a55845ae19e3c027b01cb, type: 3}
+    - _language: 10
+      _value: {fileID: 8300000, guid: 1e0527805e73af64d94d0e4edf757c9d, type: 3}
+  _tmpFonts:
+  - _value: default_tmp
+    translations:
+    - _language: 10
+      _value: {fileID: 11400000, guid: 05a9253ac8e60b448bdae4b901f81cd5, type: 2}
+    - _language: 1
+      _value: {fileID: 11400000, guid: 8d5a35d9e00668242abea533768a023f, type: 2}
   _fonts:
   - _value: default_ugui
     translations:
-    - _language: 10
-      _value: {fileID: 12800000, guid: ece7dc758aa1e1f43888284fcccaf1c2, type: 3}
     - _language: 1
+      _value: {fileID: 12800000, guid: ece7dc758aa1e1f43888284fcccaf1c2, type: 3}
+    - _language: 10
       _value: {fileID: 12800000, guid: ece7dc758aa1e1f43888284fcccaf1c2, type: 3}
     - _language: 14
       _value: {fileID: 12800000, guid: ece7dc758aa1e1f43888284fcccaf1c2, type: 3}
   _startWithDeviceLanguage: 0
-  _startingLanguage: 1
+  _startingLanguage: 10
+  _fallbackLanguage: 10

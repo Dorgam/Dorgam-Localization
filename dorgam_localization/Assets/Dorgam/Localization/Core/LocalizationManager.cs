@@ -41,9 +41,10 @@ namespace Dorgam.Localization.Core
 			    }
 			    else
 			    {
-			        Debug.LogWarning(CurrentLanguage.ToString() + " Translation of term: " + termValue + " does not exist in the dictionary.");
-			        return default(T);
-			    }
+			        Debug.LogWarning(CurrentLanguage + " Translation of term: " + termValue + " does not exist in the dictionary.");
+			        Debug.LogWarning("Attempting Fallback Translation ...");
+			        return GetFallbackTranslation<T>(termValue);
+                }
             } 
 			else 
 			{
@@ -51,6 +52,41 @@ namespace Dorgam.Localization.Core
 				return default(T);
 			}
 		}
+
+	    public static T GetLanguageTranslation<T>(string termValue, SystemLanguage language)
+	    {
+	        if (_termsDictionary.ContainsKey(termValue))
+	        {
+	            if (_termsDictionary[termValue].ContainsKey(language))
+	            {
+	                Translation<T> targetTranslation = (Translation<T>)_termsDictionary[termValue][language];
+	                return targetTranslation.Value;
+	            }
+	            else
+	            {
+	                Debug.LogWarning(language + " Translation of term: " + termValue + " does not exist in the dictionary.");
+	                return default(T);
+	            }
+	        }
+	        else
+	        {
+	            Debug.LogWarning("Term: " + termValue + " does not exist in the dictionary.");
+	            return default(T);
+	        }
+	    }
+
+        private static T GetFallbackTranslation<T>(string termValue)
+	    {
+	        if (_termsDictionary[termValue].ContainsKey(_dictionary.FallbackLanguage))
+	        {
+	            return GetLanguageTranslation<T>(termValue, _dictionary.FallbackLanguage);
+	        }
+	        else
+	        {
+	            Debug.LogWarning(_dictionary.FallbackLanguage + "(Fallback) Translation of term: " + termValue + " does not exist in the dictionary.");
+                return default(T);
+	        }
+	    }
 
 	    public static bool IsCurrentLanguageRTL()
 	    {
